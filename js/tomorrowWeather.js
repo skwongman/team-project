@@ -65,7 +65,9 @@ const view = {
         // Weather Timeslots
         const weatherTimeslot1 = dataTemp.records.location[0].weatherElement[0].time[1];
         const weatherTimeslot2 = dataTemp.records.location[0].weatherElement[0].time[2];
-        const dayTimeslot = weatherTimeslot2.startTime.split(" ").pop().split(":")[0] + ":00 ~ " + weatherTimeslot2.endTime.split(" ").pop().split(":")[0] + ":00";
+        const startTimeslot = weatherTimeslot2.startTime.split(" ").pop().split(":")[0] + ":00 ~ ";
+        const endTimeslot = weatherTimeslot2.endTime.split(" ").pop().split(":")[0] + ":00";
+        const dayTimeslot = startTimeslot + endTimeslot;
 
         if(dayTimeslot == "06:00 ~ 18:00"){
             // Weather Description
@@ -90,9 +92,13 @@ const view = {
         // Weather Timeslots
         const weatherTimeslot1 = dataTemp.records.location[0].weatherElement[0].time[1];
         const weatherTimeslot2 = dataTemp.records.location[0].weatherElement[0].time[2];
+        const startTimeslot1 = weatherTimeslot1.startTime.split(" ").pop().split(":")[0] + ":00 ~ ";
+        const endTimeslot1 = weatherTimeslot1.endTime.split(" ").pop().split(":")[0] + ":00";
+        const startTimeslot2 = weatherTimeslot2.startTime.split(" ").pop().split(":")[0] + ":00 ~ ";
+        const endTimeslot2 = weatherTimeslot2.endTime.split(" ").pop().split(":")[0] + ":00";
         // Day and Night Timeslots
-        const dayTimeslot = weatherTimeslot2.startTime.split(" ").pop().split(":")[0] + ":00 ~ " + weatherTimeslot2.endTime.split(" ").pop().split(":")[0] + ":00";
-        const nightTimeslot = weatherTimeslot1.startTime.split(" ").pop().split(":")[0] + ":00 ~ " + weatherTimeslot1.endTime.split(" ").pop().split(":")[0] + ":00";
+        const dayTimeslot = startTimeslot2 + endTimeslot2;
+        const nightTimeslot = startTimeslot1 + endTimeslot1;
 
         $("#tomorrowDayWeatherPeriod").text(nightTimeslot);
         $("#tomorrowNightWeatherPeriod").text(dayTimeslot);
