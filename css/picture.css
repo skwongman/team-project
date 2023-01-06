@@ -1,0 +1,55 @@
+.layout{
+    height: 205px;
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 10px;
+    background-size: cover;
+}
+
+.split3{
+    display: grid;
+    grid-template-columns: 30px 1fr 15px;
+    height: 100%;
+    margin-right: 20px;
+}
+
+.leftButton{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.rightButton{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.middle{
+    display: grid;
+    grid-template-rows: 1fr 1px;
+    margin-bottom: 20px;
+}
+
+.right{
+    width: 25px;
+    height:25px;
+}
+
+.dot{
+    margin: 2px;
+    opacity: 0.7;
+}
+
+@media(max-width:800px) {
+
+    .layout{
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+}

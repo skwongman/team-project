@@ -28,38 +28,106 @@ html {
 
 
 /* Main Content */
+body {
+	background-color: #3c8fd1;
+	background-image: url("https://skwongman.github.io/team-project/img/background.png");
+	background-position: 0px 530px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	font-family: "微軟正黑體", "思源黑體", Roboto, sans-serif;
+}
+
 .outer-container {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	margin-top: 30px;
+	padding: 10px;
 	text-align: center;
 }
 
 .container {
 	display: flex;
-	width: 1200px;
+	width: 1500px;
 }
 
-.forecast {
+.forecast,
+.today-weather,
+.tomorrow-weather,
+.UV-index,
+.Weather-Information {
 	flex: auto;
 	width: 50%;
 }
 
-.weather {
+.weather-main,
+.UV-index-Weather-Information {
 	display: flex;
-}
-
-.today-weather {
-	flex: auto;
-	width: 50%;
-}
-
-.tomorrow-weather {
-	flex: auto;
-	width: 50%;
 }
 
 .weather-map {
 	flex: auto;
-	width: 50%;
+	width: 40%;
+}
+
+@media(max-width:1250px) {
+
+	.outer-container {
+		margin: 30px 50px 50px 50px;
+	}
+
+	.weather-main,
+	.container,
+	.UV-index-Weather-Information {
+		flex-wrap: wrap;
+	}
+
+	.today-weather,
+	.tomorrow-weather,
+	.UV-index,
+	.Weather-Information {
+		width: 50%;
+	}
+
+	.forecast {
+		width: 90%;
+	}
+
+	.weather-map {
+		width: 90%;
+		margin-top: 30px;
+	}
+
+	body {
+		background-position: 0px 1200px;
+		background-size: cover;
+	}
+
+}
+
+@media(max-width:800px) {
+
+	.today-weather {
+		width: 90%;
+	}
+	
+	.tomorrow-weather {
+		width: 90%;
+		margin: 20px 0px 20px 0px;
+	}
+
+	.UV-index-Weather-Information {
+		display: block;
+	}
+
+	.UV-index {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.Weather-Information {
+		width: 100%;
+	}
+
 }
