@@ -33,9 +33,9 @@ const viewUV = {
         ultraVioletValue = ultraVioletData['records']['weatherElement']['location'];
         ultraVioletValue.forEach((element) => {
             for (let j = 0; j < stationList.length; j++) {
-                if (element.locationCode == stationList[j]['stationID']) {
+                if (element.StationID == stationList[j]['stationID']) {
 
-                    master.push({ 'stationID': stationList[j]['stationID'], 'stationName': stationList[j]['stationName'], 'uvValue': element.value });
+                    master.push({ 'stationID': stationList[j]['stationID'], 'stationName': stationList[j]['stationName'], 'uvValue': element.UVIndex });
                     return
                 }
             }
