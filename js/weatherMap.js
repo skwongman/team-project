@@ -34,7 +34,7 @@ function isDayTime() {
   }
 }
 
-fetch("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-DF2CB80E-CB70-453A-B35E-80356742388A",{
+fetch("https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-DF2CB80E-CB70-453A-B35E-80356742388A",{
   method:"GET",
 }).then(function(response){
   return response.json();

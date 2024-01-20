@@ -8,7 +8,7 @@ const model = {
             return dataTemp;
         };
         
-        getWeatherData("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=" + API_KEY)
+        getWeatherData("https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=" + API_KEY)
         .then(dataTemp => {
             view.render(dataTemp);
             view.renderDescriptionAndIcon(dataTemp);

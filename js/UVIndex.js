@@ -8,8 +8,8 @@ const modelUV = {
             return data;
         };
 
-        const ultraVioletData = getData("https://opendata.cwb.gov.tw/api/v1/rest/datastore/O-A0005-001?Authorization=" + CWB_API_KEY);
-        const stationData = getData("https://opendata.cwb.gov.tw/api/v1/rest/datastore/C-B0074-001?Authorization=" + CWB_API_KEY);
+        const ultraVioletData = getData("https://opendata.cwa.gov.tw/api/v1/rest/datastore/O-A0005-001?Authorization=" + CWB_API_KEY);
+        const stationData = getData("https://opendata.cwa.gov.tw/api/v1/rest/datastore/C-B0074-001?Authorization=" + CWB_API_KEY);
 
         Promise.all([ultraVioletData, stationData])
             .then(([ultraVioletData, stationData]) => {
